@@ -18,14 +18,13 @@ interface HeadProps {
 }
 
 const defaultProps: HeadProps = {
-    title: 'Evolution Demo',
-    description: 'a Demo for Academy website',
+    title: '*NAME* Demo',
+    description: 'a Demo for *NAME*',
     url: 'https://evolution-demo-00-team.web.app/',
-    keywords:
-        'Evolution,Evolution Demo,Evolution Academy Page,Evolution Academy',
+    keywords: '*NAME*,*NAME* Page',
     image: {
-        url: 'https://cdn.discordapp.com/attachments/741696928957464720/910272074512224368/Evolution.jpg',
-        alt: 'Evolution Logo',
+        url: 'https://cdn.discordapp.com/attachments/731174051170746500/814603567704047646/00_logo_f27.png',
+        alt: '*NAME* Logo',
         width: '500',
         height: '500',
         type: 'image/jpeg',
@@ -49,9 +48,7 @@ const Head: FC<HeadProps> = ({
                     <meta property='og:title' content={title} />
                     <title>
                         {title}
-                        {title.search('Evolution Demo') === -1
-                            ? ' | Evolution Demo'
-                            : ''}
+                        {title.search('*NAME*') === -1 ? ' | *NAME*' : ''}
                     </title>
                 </Helmet>
             )}
@@ -103,17 +100,14 @@ const Head: FC<HeadProps> = ({
             <Helmet>
                 <meta charSet='UTF-8' />
                 {/* open graph protocol */}
-                <meta property='og:site_name' content='Evolution Demo' />
+                <meta property='og:site_name' content='*NAME*' />
                 <meta property='og:type' content='website' />
 
                 {/* twitter */}
                 <meta name='twitter:creator' content='@00team_official' />
                 <meta name='twitter:site' content='@00team_official' />
 
-                <meta
-                    name='apple-mobile-web-app-title'
-                    content='Evolution Demo'
-                />
+                <meta name='apple-mobile-web-app-title' content='*NAME*' />
                 <meta name='copyright' content='00 Team' />
                 <meta
                     name='google-site-verification'
